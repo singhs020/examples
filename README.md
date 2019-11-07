@@ -8,3 +8,5 @@ List of Topics:
 - SQS
 - SNS
 - SES
+- Mongo
+- PostgreSQL
