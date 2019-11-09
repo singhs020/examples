@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/singhs020/examples/issues"
   },
-  "homepage": "https://github.com/singhs020/examples#readme"
+  "homepage": "https://github.com/singhs020/examples#readme",
+  "dependencies": {
+    "aws-sdk": "^2.635.0"
+  }
 }
