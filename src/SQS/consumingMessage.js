@@ -17,8 +17,8 @@ sqs.receiveMessage(params, (err, data) => {
   if (err) {
     console.log(err, err.stack);
   } else {
-    if (!data.Message) { 
-      console.log('Nothing to process'); 
+    if (!Array.isArray(data.Messages) || data.Messages.length === 0) { 
+      console.log("There are no messages available for processing."); 
       return;
     }    
     
