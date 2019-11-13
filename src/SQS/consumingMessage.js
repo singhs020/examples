@@ -44,3 +44,8 @@ sqs.receiveMessage(params, (err, data) => {
 });
 
 // the above message can be implemented using promise as well.
+sqs.receiveMessage(params).promise()
+.then(data => {
+  console.log(data);
+  // do the processing here
+});
