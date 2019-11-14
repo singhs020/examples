@@ -15,12 +15,12 @@ sns.publish(params, (err, data) => {
   if (err) {
     console.log("There was an Error: ", err);
   } else {
-    console.log("Successfully published", data);
+    console.log("Successfully published.", data);
   }
 });
 
 
 // Promise implementation
 sns.publish(params).promise()
-.then(data => console.log("Successfully published", data))
+.then(data => console.log("Successfully published.", data))
 .catch(err => console.log("There was an Error: ", err));
