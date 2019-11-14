@@ -2,9 +2,9 @@
 
 
 // Load the AWS SDK for Node.js
-const AWS = require('aws-sdk');
+const AWS = require("aws-sdk");
 
-const sqs = new AWS.SQS({apiVersion: '2012-11-05'});
+const sqs = new AWS.SQS({apiVersion: "2012-11-05"});
 const params = {
   "MessageBody": JSON.stringify({
     "foo": "bar",
