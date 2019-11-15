@@ -7,53 +7,47 @@ const AWS = require("aws-sdk");
 const ses = new AWS.SES({apiVersion: "2010-12-01"});
 var params = {
   "Destination": {
-    BccAddresses: [
-      'STRING_VALUE',
-      /* more items */
+    "BccAddresses": [
+      "ADD VALUE HERE",
     ],
-    CcAddresses: [
-      'STRING_VALUE',
-      /* more items */
+    "CcAddresses": [
+      "ADD VALUE HERE",
     ],
-    ToAddresses: [
-      'STRING_VALUE',
-      /* more items */
+    "ToAddresses": [
+      "ADD VALUE HERE",
     ]
   },
-  Message: {
-    Body: {
-      Html: {
-        Data: 'STRING_VALUE',
-        Charset: 'STRING_VALUE'
+  "Message": {
+    "Body": {
+      "Html": {
+        "Data": "ADD VALUE HERE",
+        "Charset": "ADD VALUE HERE"
       },
-      Text: {
-        Data: 'STRING_VALUE',
-        Charset: 'STRING_VALUE'
+      "Text": {
+        "Data": "ADD VALUE HERE",
+        "Charset": "ADD VALUE HERE"
       }
     },
-    Subject: {
-      Data: 'STRING_VALUE',
-      Charset: 'STRING_VALUE'
+    "Subject": {
+      "Data": "ADD VALUE HERE",
+      "Charset": "ADD VALUE HERE"
     }
   },
-  Source: 'STRING_VALUE',
-  ConfigurationSetName: 'STRING_VALUE',
-  ReplyToAddresses: [
-    'STRING_VALUE',
-    /* more items */
-  ],
-  ReturnPath: 'STRING_VALUE',
-  ReturnPathArn: 'STRING_VALUE',
-  SourceArn: 'STRING_VALUE',
-  Tags: [
-    {
-      Name: 'STRING_VALUE',
-      Value: 'STRING_VALUE'
-    },
-    /* more items */
+  "Source": "ADD VALUE HERE",
+  "ReplyToAddresses": [
+    "ADD VALUE HERE"
   ]
 };
 ses.sendEmail(params, function(err, data) {
-  if (err) console.log(err, err.stack); // an error occurred
-  else     console.log(data);           // successful response
+  if (err) {
+    console.log("There was an erorr", err);
+  }
+  else {
+    console.log("Mail Sent", data);
+  }
 });
+
+// using promise
+ses.sendEmail(params).promise()
+.then(data => console.log(data))
+.catch(err => console.log(err));
