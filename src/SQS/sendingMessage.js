@@ -7,8 +7,10 @@ const AWS = require("aws-sdk");
 const sqs = new AWS.SQS({apiVersion: "2012-11-05"});
 const params = {
   "MessageBody": JSON.stringify({
-    "foo": "bar",
-    "date": (new Date()).toISOString()
+    "orderId": "this-is-an-order-id",
+    "date": "2020–02–02",
+    "shipBy": "2020–02–04",
+    "foo": "bar"
   }),
   "QueueUrl": "ADD YOUR QUEUE URL HERE"
 };
