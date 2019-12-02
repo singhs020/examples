@@ -1,6 +1,5 @@
 /* Getting Started with AWS SNS using node js. This part shows how to publish content to SNS */
 
-
 // Load the AWS SDK for Node.js
 const AWS = require("aws-sdk");
 
@@ -18,7 +17,6 @@ sns.publish(params, (err, data) => {
     console.log("Successfully published.", data);
   }
 });
-
 
 // Promise implementation
 sns.publish(params).promise()
