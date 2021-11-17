@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/singhs020/examples#readme",
   "dependencies": {
-    "aws-sdk": "^2.635.0"
+    "aws-sdk": "^2.814.0"
   }
 }
